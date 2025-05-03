@@ -5,16 +5,13 @@
     import BookingSummary from "../components/BookingSummary";
     import CurrentBooking from "../components/CurrentBooking";
 
-    function HomePage()
+    function BookingPage()
     {
         return(
             <>
-            <div className="min-h-screen flex flex-col">
-            <Navbar />
-            <div className="flex flex-grow">
-            <Sidebar/>
+            
             {/* Content */}
-            <div className="w-5/6 flex flex-col align-center justify-center p-4 min-h-full">
+            <div className="w-full flex flex-col align-center justify-center p-4 min-h-full">
                 <div className="flex flex-col gap-1">
                 <small className="text-lg ml-10 font-normal text-neutral-500">Guest</small>
                 <div className="h-3/20 gap-3 flex justify-between items-center">
@@ -30,12 +27,9 @@
             <BookingSummary/>
                 </div>
             </div>
-            </div>
-                
-            </div>
                 
             </>
         )
     }
 
-    export default HomePage;
+    export default BookingPage;
