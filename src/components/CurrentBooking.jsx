@@ -1,6 +1,6 @@
 import React from "react";
-import { ImageCard } from "./ImageCard";
 import Button from "./Button";
+import ImageCard from "./ImageCard";
 function CurrentBooking()
 {
     const imageUrl = "https://images.tokopedia.net/blog-tokopedia-com/uploads/2020/03/Cabana-room-sumber-gambar-hillfresco.jpg";
@@ -22,7 +22,7 @@ function CurrentBooking()
                     <h3 className="text-lg font-bold mb-3">Current Booking</h3>
                     <div className="flex"> 
                         <div className="flex-col items-center mt-2 mr-8">
-                            <ImageCard image={imageUrl}/>
+                            <ImageCard url={imageUrl} size='lg'/>
                             <Button label={"Show rooms details"} className={'w-xs mt-3 outline outline-gray-300 justify-center bg-white hover:bg-neutral-100'}/>
                         </div>
                         <div>

@@ -9,8 +9,6 @@
     {
         return(
             <>
-            
-            {/* Content */}
             <div className="w-full flex flex-col align-center justify-center p-4 min-h-full">
                 <div className="flex flex-col gap-1">
                 <small className="text-lg ml-10 font-normal text-neutral-500">Guest</small>
