@@ -1,97 +1,73 @@
 import ImageCard from "../components/ImageCard";
+import { MdLocationOn, MdOutlineDateRange, MdPeople, MdOutlineSearch } from "react-icons/md";
+import { BsMoonStars } from "react-icons/bs";
 
 function HomePage()
 {
     const imageUrl = "https://cf.bstatic.com/xdata/images/hotel/max1024x768/484723796.jpg?k=02fb9464da52b3628767c269df6934c2e939bd3e88b8003adc7d887ea2277a55&o=&hp=1";
+    const numbers = Array.from({ length: 30 }, (_, i) => i + 1);
     return(
-        <>
-        <div className="flex flex-col gap-1 w-1/2"> 
-            <h1 className="text-xl font-semibold my-3">Find Hotel to Stay</h1>
-            <div className="bg-white p-5 rounded-2xl mt-2 w-full shadow-md">
-            <div className="grid grid-cols-[1fr_1fr_auto] mb-3">
-                <label className="font-semibold" htmlFor="date">Date</label>
-                <label className="font-semibold" htmlFor="location">Where To</label>
-                <span className="invisible">Search</span>
+        <> 
+            <div className="bg-linear-to-t from-green-700 to-green-500 h-[300px]"></div>
+            <div className="w-full flex flex-col items-center justify-center mt-[-60px]">
+            <div className="bg-white px-5 py-3 w-[900px] shadow-md rounded-xl">
+            <p className="text-green-600 font-semibold text-[15px] mb-8">Search Your Dream Hotel</p>
+            <div className="flex flex-col">
+                <div className="flex flex-col mb-5">
+                    <p className="mb-1">
+                        Kota, tujuan, atau nama hotel
+                    </p>
+                    <div className="flex w-full border border-gray-200 rounded-sm items-center p-1">
+                        <MdLocationOn className="text-green-600 text-2xl mx-1"/>
+                        <input className="w-full h-8 text-lg focus:outline-none" type="text" name="" id="" placeholder="Semarang" />
+                    </div>
+                </div>
+                <div className="flex justify-between gap-4 items-center">
+                    <div className="flex flex-col mb-5 flex-1">
+                    <p className="mb-1">
+                        Check-in
+                    </p>
+                    <div className="flex w-full border border-gray-200 rounded-sm items-center p-1">
+                        <MdOutlineDateRange className="text-green-600 text-2xl mx-1"/>
+                        <input className="w-full h-8 text-lg focus:outline-none" type="text" name="" id="" placeholder="Jum, 16 Mei 2025" />
+                    </div>
+                    </div>
+                    <div className="flex flex-col mb-5 flex-1">
+                    <p className="mb-1">
+                        Duration
+                    </p>
+                    <div className="flex w-full border border-gray-200 rounded-sm items-center p-1">
+                        <BsMoonStars className="text-green-600 text-2xl mx-1"/>
+                        <select name="" id="" className="w-full focus:outline-none h-full text-lg">
+                            {numbers.map((num) =>
+                            (
+                                <option value={`${num} malam`}>{`${num} malam`}</option>
+                            ))}
+                        </select>
+                    </div>
+                    </div>
+                    <div className="flex flex-col mb-5 w-70">
+                    <p className="mb-2">
+                        Check-out
+                    </p>
+                        <p className="w-full h-8 text-lg">17 Mei 2025</p>
+                    </div>
+                </div>
+                <div className="flex justify-between gap-4 items-center">
+                    <div className="flex flex-col mb-5 flex-2">
+                    <p className="mb-1">
+                        Tamu dan kamar  
+                    </p>
+                    <div className="flex w-full border border-gray-200 rounded-sm items-center p-1">
+                        <MdPeople className="text-green-600 text-2xl mx-1"/>
+                        <input className="w-full h-8 text-lg focus:outline-none" type="text" name="" id="" placeholder="Sab, 17 Mei 2025" />
+                    </div>
+                </div>
+                    <button className="flex-1 bg-orange-600 text-white h-10 mt-1 rounded-sm flex items-center justify-center gap-2 text-md font-semibold hover:bg-orange-700 hover:cursor-pointer"> <MdOutlineSearch className="text-2xl"/>Cari Hotel</button>
+                </div>
             </div>
-                <form className="grid grid-cols-[1fr_1fr_auto] gap-5 items-center">
-                    <input type="text" className="rounded-full bg-gray-100 px-4 py-2 h-12" placeholder="Jul 12 - Jul 14" />
-                    <input type="text" className="rounded-full bg-gray-100 px-4 py-2 h-12" placeholder="Yogyakarta, Indonesia" />
-                    <button className="bg-green-700 text-white px-6 py-2 rounded-full font-semibold">Search</button>
-                </form>
             </div>
-            <h1 className="text-xl font-semibold my-3">Lodging Available</h1>
-            <div className="flex gap-4 overflow-x-auto flex-no-wrap mb-3">
-                <div className="flex-col bg-white p-2 rounded-2xl mt-2 shadow-md">
-                    <ImageCard url={imageUrl} size='md' />
-                    <h3>Shikara Hotel</h3>
-                    <small>Shikara Hotel</small>
-                    <h2>$42.73</h2>
-                </div>
-                <div className="flex-col bg-white p-2 rounded-2xl mt-2 shadow-md">
-                    <ImageCard url={imageUrl} size='md' />
-                    <h3>Shikara Hotel</h3>
-                    <small>Shikara Hotel</small>
-                    <h2>$42.73</h2>
-                </div>
-                <div className="flex-col bg-white p-2 rounded-2xl mt-2 shadow-md">
-                    <ImageCard url={imageUrl} size='md' />
-                    <h3>Shikara Hotel</h3>
-                    <small>Shikara Hotel</small>
-                    <h2>$42.73</h2>
-                </div>
-                <div className="flex-col bg-white p-2 rounded-2xl mt-2 shadow-md">
-                    <ImageCard url={imageUrl} size='md' />
-                    <h3>Shikara Hotel</h3>
-                    <small>Shikara Hotel</small>
-                    <h2>$42.73</h2>
-                </div>
             </div>
-            <div className="bg-white p-5 rounded-2xl mt-2 w-full shadow-md">
-                <div className="flex justify-between mb-4">
-                    <div className="flex gap-10">
-                        <h1 className="text-lg font-semibold">Most Popular</h1>
-                        <h1 className="text-lg font-semibold">Special Offers</h1>
-                        <h1 className="text-lg font-semibold">Near Me</h1>
-                    </div>
-                    <p className="text-orange-600">View all</p>
-                </div>
-                <div className="grid grid-cols-2 gap-4 p-2">
-                    <div className="flex justify-between items-center shadow-md p-2 rounded-sm">
-                    <ImageCard url={imageUrl} size='sm'/>
-                    <div>
-                        <h6>Shikara Hotel</h6>
-                        <small>Indonesia</small>
-                    </div>
-                        <h5>$42<span className="text-gray-500">/night</span></h5>
-                    </div>
-                    <div className="flex justify-between items-center">
-                    <ImageCard url={imageUrl} size='sm'/>
-                    <div>
-                        <h6>Shikara Hotel</h6>
-                        <small>Indonesia</small>
-                    </div>
-                        <h5>$42<span className="text-gray-500">/night</span></h5>
-                    </div>
-                    <div className="flex justify-between items-center">
-                    <ImageCard url={imageUrl} size='sm'/>
-                    <div>
-                        <h6>Shikara Hotel</h6>
-                        <small>Indonesia</small>
-                    </div>
-                        <h5>$42<span className="text-gray-500">/night</span></h5>
-                    </div>
-                    <div className="flex justify-between items-center">
-                    <ImageCard url={imageUrl} size='sm'/>
-                    <div>
-                        <h6>Shikara Hotel</h6>
-                        <small>Indonesia</small>
-                    </div>
-                        <h5>$42<span className="text-gray-500">/night</span></h5>
-                    </div>
-                </div>
-
-            </div>
-        </div>
         </>
     )
 }
