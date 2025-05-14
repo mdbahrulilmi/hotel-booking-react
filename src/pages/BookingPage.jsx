@@ -1,7 +1,5 @@
-    import Sidebar from "../components/Sidebar";
     import Button from "../components/Button";
     import { FaArrowLeftLong } from "react-icons/fa6";
-    import Navbar from "../components/Navbar";
     import BookingSummary from "../components/BookingSummary";
     import CurrentBooking from "../components/CurrentBooking";
 

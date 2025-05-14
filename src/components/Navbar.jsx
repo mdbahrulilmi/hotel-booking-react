@@ -1,42 +1,46 @@
-import React from 'react';
-import { MdNotifications, MdHelp, MdAccountCircle } from 'react-icons/md';
+import { useLocation, Link } from 'react-router-dom';
 
-function NavbarIconButton({ icon, label })
-{
-  const Icon = icon;
-  
+function NavbarNavItem({ label, path }) {
+  const location = useLocation();
+  const isActive = location.pathname === `/${path}`;
+
   return (
-    <li className="flex items-center">
-      <button className="p-2 rounded-full hover:bg-gray-100 text-gray-700" aria-label={label}>
-        <Icon className="text-xl" />
-      </button>
+    <li
+      className={`
+        flex items-center px-4 py-2 cursor-pointer transition-all text-center
+        ${isActive ? 'border-b-4 border-green-600 text-black' : 'bg-white'}
+      `}
+    >
+      <Link to={`/${path}`} className="w-full h-full capitalize">
+        {label}
+      </Link>
     </li>
   );
-};
+}
 
-function Navbar()
+
+
+function Navbar() 
 {
-  const navIcons = [
-    { icon: MdNotifications, label: 'Notifications' },
-    { icon: MdHelp, label: 'Help' },
-    { icon: MdAccountCircle, label: 'Account' }
-  ];
+  const navItems = [
+  { label: "Home", path: "/" },
+  { label: "Explore Hotels", path: "/search" },
+  { label: "Favorites", path: "/favorites" },
+  { label: "My Bookings", path: "/bookings" },
+  { label: "Support", path: "/support" },
+]
 
   return (
-    <div className="w-full py-4 px-6 shadow-sm bg-white sticky top-0 z-10">
-      <div className="flex justify-between items-center">
-        <h3 className="text-xl font-semibold text-green-700">Hotel Booking</h3>
-        
-        <ul className="flex gap-2 list-none">
-          {navIcons.map((item, index) => (
-            <NavbarIconButton 
+    <div className="flex">
+      <ul className="flex gap-4 font-semibold text-sm">
+        {navItems.map((item, index) => (
+            <NavbarNavItem 
               key={index}
-              icon={item.icon}
               label={item.label}
+              path={item.path}
             />
-          ))}
-        </ul>
-      </div>
+        ))}
+      </ul>
     </div>
   );
 };
