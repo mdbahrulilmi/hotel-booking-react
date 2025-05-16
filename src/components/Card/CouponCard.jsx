@@ -13,11 +13,11 @@ function CouponCard()
         couponList.map((item) =>
         (
             <div className="relative w-[280px] shrink-0 py-3 px-5 overflow-hidden bg-white">
-                                    <div className="absolute -left-3 top-3/5 -translate-y-1/2 w-6 h-6 rounded-full z-10 shadow-inner" style={{backgroundColor:'rgb(231, 231, 231)'}}></div>
-                                    <div className="absolute -right-3 top-3/5 -translate-y-1/2 w-6 h-6 rounded-full z-10 shadow-inner" style={{backgroundColor:'rgb(231, 231, 231)'}}></div>
+                                    <div className="absolute -left-3 top-3/5 -translate-y-1/2 w-6 h-6 rounded-full z-1 shadow-inner" style={{backgroundColor:'rgb(231, 231, 231)'}}></div>
+                                    <div className="absolute -right-3 top-3/5 -translate-y-1/2 w-6 h-6 rounded-full z-1 shadow-inner" style={{backgroundColor:'rgb(231, 231, 231)'}}></div>
                                     <h5 className="text-sm font-semibold">{item.label}</h5>
                                     <p className="mb-8 text-[12px] font-semibold text-gray-700">{item.condition}</p>
-                                    <div className="left-3 top-3/5 -translate-y-1/2 border border-dashed border-gray-200"></div>
+                                    <div className="left-3 top-3/5 -translate-y-1/2 border border-dashed border-gray-200    "></div>
                                     <div className="flex mt-3 justify-between">
                                         <div className="flex px-3 gap-2 items-center" style={{backgroundColor:'rgb(231, 231, 231)'}}>
                                         <MdOutlineContentCopy />
