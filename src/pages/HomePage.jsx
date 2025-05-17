@@ -80,35 +80,6 @@ function HomePage() {
     <h3 class="text-lg font-semibold mb-2">Berbagai Cara Bayar Fleksibel dan Mudah</h3>
     <p class="text-sm text-gray-600">Kemudahan bertransaksi dengan Pay at Hotel, makin hemat dengan PayLater.</p>
   </div>
-    <div class="max-w-7xl mx-auto px-4 py-10 space-y-12">
-    <h2 class="text-2xl font-bold mb-1">Partner Hotel</h2>
-    <p class="text-gray-500 mb-4">Partner Hotel di Dalam & Luar Negeri</p>
-    <p class="text-gray-700 mb-6 max-w-2xl">Kami bekerja sama dengan berbagai jaringan hotel di seluruh dunia untuk memastikan kenyamanan Anda saat menginap di belahan dunia manapun!</p>
-    <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-6 items-center">
-      <img src="" alt="Partner 1" class="h-10 object-contain">
-      <img src="" alt="Partner 2" class="h-10 object-contain">
-      <img src="" alt="Partner 3" class="h-10 object-contain">
-      <img src="" alt="Partner 4" class="h-10 object-contain">
-      <img src="" alt="Partner 5" class="h-10 object-contain">
-      <img src="" alt="Partner 6" class="h-10 object-contain">
-    </div>
-
-  <hr class="my-10 border-gray-200" />
-
-    <h2 class="text-2xl font-bold mb-2">Partner Pembayaran Resmi</h2>
-    <p class="text-gray-700 mb-6 max-w-2xl">Kami bekerja sama dengan beragam penyedia layanan pembayaran terpercaya agar Anda bisa bertransaksi dengan aman dan lancar!</p>
-    <div class="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-6 gap-6 items-center">
-      <img src="" alt="VISA" class="h-8 object-contain">
-      <img src="" alt="Mastercard" class="h-8 object-contain">
-      <img src="" alt="JCB" class="h-8 object-contain">
-      <img src="" alt="BCA" class="h-8 object-contain">
-      <img src="" alt="Mandiri" class="h-8 object-contain">
-      <img src="" alt="BRI" class="h-8 object-contain">
-    </div>
-</div>
-
-
-
   <div>
     <div class="mx-auto mb-4 w-16 h-16 text-indigo-600">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-16 h-16 mx-auto">

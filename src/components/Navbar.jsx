@@ -23,11 +23,11 @@ function NavbarNavItem({ label, path }) {
 function Navbar() 
 {
   const navItems = [
-  { label: "Home", path: "/" },
-  { label: "Explore Hotels", path: "/search" },
-  { label: "Favorites", path: "/favorites" },
-  { label: "My Bookings", path: "/bookings" },
-  { label: "Support", path: "/support" },
+  { label: "Home", path: "home" },
+  { label: "Explore Hotels", path: "search" },
+  { label: "Favorites", path: "favorites" },
+  { label: "My Bookings", path: "bookings" },
+  { label: "Support", path: "support" },
 ]
 
   return (
