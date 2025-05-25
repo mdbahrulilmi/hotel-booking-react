@@ -1,14 +1,15 @@
 
+import HotelCardRectangle from "../components/Card/HotelCardRectangle";
 import Filter from "../components/Filter";
 import SearchOptionFlex from "../components/SearchOptionFlex";
 import Sidebar from "../components/Sidebar";
 
-function ExploreHotel()
+function Explore()
 {
     return(
         <>
         {/* Input Search */}
-        <div className="flex justify-center bg-white ">
+        <div className="flex justify-center bg-white sticky top-0 z-10">
             <SearchOptionFlex/>
         </div>
 
@@ -17,7 +18,9 @@ function ExploreHotel()
             <Sidebar/>
             <div className="w-4/5">
             <Filter/>
-            
+            <div className="ml-[50px]">
+            <HotelCardRectangle />
+            </div>
             </div>
             </div>
 
@@ -26,4 +29,4 @@ function ExploreHotel()
     )
 }
 
-export default ExploreHotel;
+export default Explore;

@@ -38,7 +38,7 @@ function SearchOptionFlex()
                                                 placeholder="2 Dewasa, 1 Anak, 1 Kamar"
                                                 />
                                             </div>
-            <button className="w-[250px]">Cari Hotel</button>
+            <button className="w-[300px] bg-green-700 px-2 py-3 text-white">Cari Hotel</button>
             </div>
     )
 }

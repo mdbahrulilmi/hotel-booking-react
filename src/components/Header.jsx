@@ -23,8 +23,10 @@ function Header()
     { icon: MdAccountCircle, label: 'Account' }
   ];
 
+  const isHome = location.pathname === '/home' || '/' ? 'sticky': 'none';
+
   return (
-    <div className="w-full py-4 px-6 shadow-sm bg-white sticky top-0 z-10">
+    <div className={`w-full py-4 px-6 shadow-sm bg-white top-0 z-10 ${isHome}`}>
       <div className="flex justify-between items-center">
         <h3 className="text-xl font-semibold text-green-700">Hotel Booking</h3>
         <Navbar/>

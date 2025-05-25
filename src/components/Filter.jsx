@@ -1,7 +1,7 @@
 function Filter()
 {
     return(
-        <div className="flex justify-center gap-4">
+        <div className="flex justify-end gap-4">
                 <div className="flex items-center gap-2">
                     <p className="text-[12px]">Urutkan Berdasarkan:</p>
                     <select name="" id="" className="bg-white rounded-2xl px-1 py-1">
@@ -13,7 +13,7 @@ function Filter()
                 </div>
                 <div className="flex items-center gap-2">
                     <p className="text-[12px]">Tampilan Harga:</p>
-                    <select name="" id="" className="bg-white rounded-2xl px-4 py-2">
+                    <select name="" id="" className="bg-white rounded-2xl px-1 py-1">
                         <option value="">Perkamar permalam</option>
                         <option value="">Total harga</option>
                     </select>
