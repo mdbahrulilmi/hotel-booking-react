@@ -32,10 +32,10 @@ const hotelList = [
 function HotelCard()
 {
     return(
-        hotelList.map((item) =>
+        hotelList.map((item, index) =>
         (
             <div className="rounded-lg w-[250px] h-[330px] overflow-hidden bg-white shrink-0">
-                <img src={item.image} className="h-[200px] w-full" alt="" />
+                <img src={`/assets/images/hotel${index + 1}.jpeg`} className="h-[200px] w-full" alt="" />
                 <div className="px-4 py-3">
                 <p className="text-[15px] font-bold text-gray-800 leading-tight">{item.title}</p>
                 {Array.from({length:item.stars}, (_, i) => (
@@ -45,7 +45,7 @@ function HotelCard()
                 <p className="text-[11px] font-bold text-green-700">{item.price}</p>
                 </div>
             </div>
-        ))
+        )).reverse()
     );
 }
 

@@ -5,16 +5,11 @@ function NavbarNavItem({ label, path }) {
   const isActive = location.pathname === `/${path}`;
 
   return (
-    <li
-      className={`
-        flex items-center px-4 py-2 cursor-pointer transition-all text-center
-        ${isActive ? 'border-b-4 border-green-600 text-black' : 'bg-white'}
-      `}
-    >
-      <Link to={`/${path}`} className="w-full h-full capitalize">
-        {label}
+    <Link to={`/${path}`} className={`flex items-center px-4 py-2 cursor-pointer transition-all text-center ${isActive ? 'border-b-4 border-green-600 text-black' : 'bg-white'}`}>
+    <li className='w-full h-full capitalize'>
+          {label}
+      </li>
       </Link>
-    </li>
   );
 }
 

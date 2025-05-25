@@ -30,10 +30,10 @@ const articleList = [
 function ArticleCard()
 {
     return(
-        articleList.map((item) =>
+        articleList.map((item, index) =>
         (
             <div className="rounded-lg w-[250px] h-[205px] overflow-hidden bg-white shrink-0">
-                <img src={item.image} className="h-[110px] w-full" alt="" />
+                <img src={`/assets/images/hotel${index + 1}.jpeg`} className="h-[110px] w-full" alt="" />
                 <div className="px-4 py-2">
                 <p className="text-[15px] font-semibold text-gray-800">{item.title}</p>
                 <p className="text-[11px] font-semibold text-gray-600">{item.publisher}</p>

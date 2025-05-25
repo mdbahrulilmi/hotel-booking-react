@@ -39,7 +39,7 @@ function HotelCardRectangle()
         hotelList.map((item, index) =>
         (
             <div className="rounded-lg w-full h-[200px] overflow-hidden bg-white flex my-5 hover:shadow-sm hover:shadow-blue-300 hover:cursor-pointer">
-                <img src={item.image} className="h-[200px] w-[300px] shrink-0" alt="" />
+                <img src={`/assets/images/hotel${index + 1}.jpeg`} className="h-[200px] w-[300px] shrink-0" alt="" />
                 <div className="flex justify-between w-full">
 
                 <div className="px-4 py-3 w-4/6 shrink-0">
