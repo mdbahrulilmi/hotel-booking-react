@@ -26,14 +26,14 @@ function ScrollCard({Content})
               </div>
               <button
                 onClick={() => scroll("left")}
-                className="absolute left-0 top-1/2 -translate-y-1/2 z-2 bg-white text-green-500 p-2 rounded-full shadow"
+                className="absolute left-0 top-1/2 -translate-y-1/2 z-2 bg-white text-green-500 p-2 rounded-full shadow cursor-pointer"
               >
                 <ChevronLeft />
               </button>
 
               <button
                 onClick={() => scroll("right")}
-                className="absolute right-0 top-1/2 -translate-y-1/2 z-1 bg-white text-green-500git p-2 rounded-full shadow"
+                className="absolute right-0 top-1/2 -translate-y-1/2 z-1 bg-white text-green-500 p-2 rounded-full shadow cursor-pointer"
               >
                 <ChevronRight />
               </button>

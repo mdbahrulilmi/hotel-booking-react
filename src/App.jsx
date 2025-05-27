@@ -8,6 +8,7 @@ import Favorites from './pages/Favorites';
 import Bookings from './pages/Bookings';
 import Support from './pages/Support';
 import ScrollToTop from './components/ScrollToTop';
+import BookingForm from './pages/BookingForm';
 
 
 
@@ -26,6 +27,7 @@ function App() {
           <Route path="bookings" element={<Bookings />} />
           <Route path="support" element={<Support />} />
           <Route path="detail/:id" element={<Detail />} />
+          <Route path="form/:id" element={<BookingForm />} />
           </Route>
       </Routes>
     </BrowserRouter>

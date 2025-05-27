@@ -75,7 +75,7 @@ function Detail() {
         <div className="flex justify-center">
           <SearchOptionFlex />
         </div>
-        <div className="flex justify-center border-b">
+        <div className="flex justify-center shadow-sm">
           <div className="flex justify-between w-4/5 pb-4 font-semibold">
             <ul className="flex list-none gap-10">
               {sections.map((section) => (
